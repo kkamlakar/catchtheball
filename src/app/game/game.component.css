@@ -32,15 +32,6 @@
   align-items: center;
 }
 
-.game-frame {
-  width: 95%;
-  height: 95%;
-  border: 3px solid #333;
-  border-radius: 10px;
-  background-color: #fff;
-  position: absolute;
-  overflow: hidden;
-}
 
 .footer {
   background-color: #aaa;
@@ -56,21 +47,30 @@
   margin-top: 10px;
 }
 
-.ball {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 150px; /* Will be randomized in TS */
+/* Make sure the game frame takes the full width */
+.game-frame {
+  position: relative;
+  width: 100%;  /* Full width */
+  height: 400px; /* Adjust height based on your preference */
+  border: 1px solid black;
 }
 
-.basket {
-  width: 100px;
-  height: 20px;
-  background-color: brown;
+/* Ball styling */
+.ball {
   position: absolute;
-  bottom: 20px;
-  left: 150px; /* Initial position */
+  width: 30px;  /* Ball size */
+  height: 30px;
+  background-color: red;
+  border-radius: 50%; /* Make the ball round */
+}
+
+/* Basket styling */
+.basket {
+  position: absolute;
+  width: 80px;  /* Adjust basket size */
+  height: 20px;
+  background-color: blue;
+  bottom: 0;
+  left: 50%;  /* Initially position basket at center */
+  transform: translateX(-50%); /* Center basket horizontally */
 }
