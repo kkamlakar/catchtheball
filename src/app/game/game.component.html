@@ -1,0 +1,29 @@
+<div class="game-layout">
+  <header class="header">Ball Catch Game</header>
+
+  <div class="main-content">
+    <aside class="left">
+      <section>
+        <div class="score-bar">
+          Score: {{ score }}
+          <span *ngIf="gameOver" style="color: red; font-weight: bold; margin-left: 20px;">
+            Game Over 💥 Press R to restart
+          </span>
+        </div>
+      </section>
+    </aside>
+
+    <section class="right">
+      <div class="game-frame" id="game-frame"> <!-- fixed id here -->
+        <div class="ball" id="ball"></div>
+        <div class="basket" id="basket"></div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="score-bar">
+      Score: {{ score }} <!-- fixed here -->
+    </div>
+  </footer>
+</div>
