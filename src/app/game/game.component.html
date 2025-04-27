@@ -4,21 +4,23 @@
   <div class="main-content">
     <aside class="left">
       <section>
+        <div class="input-container" style="text-align: center;">
+          <input type="number" [(ngModel)]="multiplier" placeholder="Enter multiplier" />
+          <button (click)="onSubmitMultiplier(multiplier)">Start Game</button>
+        </div>
         <div class="score-bar">
           Score: {{ score }}
           <span *ngIf="gameOver" style="color: red; font-weight: bold; margin-left: 20px;">
             Game Over 💥 Press R to restart
           </span>
         </div>
-      </section>
+            </section>
     </aside>
 
     <section class="right">
-      <div class="game-frame" id="game-frame"> <!-- fixed id here -->
+      <div class="game-frame" id="game-frame">
         <div class="ball" id="ball"></div>
         <div class="basket" id="basket"></div>
-
-        <!-- Add a div for flashing score -->
         <div class="flashing-score" *ngIf="flashedScore">{{ flashedScore }}</div>
       </div>
     </section>
@@ -30,8 +32,4 @@
     </div>
   </footer>
 
-  <div class="input-container" style="text-align: center;">
-    <input type="number" [(ngModel)]="multiplier" placeholder="Enter multiplier" />
-    <button (click)="onSubmitMultiplier(multiplier)">Start Game</button>
-  </div>
 </div>

@@ -51,7 +51,7 @@
 .game-frame {
   position: relative;
   width: 100%;  /* Full width */
-  height: 400px; /* Adjust height based on your preference */
+  height: 600px; /* Adjust height based on your preference */
   border: 1px solid black;
 }
 
