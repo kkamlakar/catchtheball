@@ -6,7 +6,7 @@
 }
 
 .header {
-  background-color: #f8a;
+  background-color: #BF9264;
   text-align: center;
   line-height: 50px;
   font-weight: bold;
@@ -19,12 +19,12 @@
 }
 
 .left {
-  background-color: #cfc;
+  background-color: #BBD8A3;
   padding: 10px;
 }
 
 .right {
-  background-color: #eef;
+  background-color: #BBD8A3;
   padding: 10px;
   position: relative;
   display: flex;
@@ -34,7 +34,7 @@
 
 
 .footer {
-  background-color: #aaa;
+  background-color: #BF9264;
   text-align: center;
   line-height: 30px;
   font-weight: bold;
@@ -52,7 +52,10 @@
   position: relative;
   width: 100%;  /* Full width */
   height: 600px; /* Adjust height based on your preference */
-  border: 1px solid black;
+  border: 5px solid #CBA35C; /* Blue frame */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  background-color: #F0BB78; /* White background inside frame */
 }
 
 /* Ball styling */
@@ -60,7 +63,7 @@
   position: absolute;
   width: 30px;  /* Ball size */
   height: 30px;
-  background-color: red;
+  background-color: #690B22;
   border-radius: 50%; /* Make the ball round */
 }
 
@@ -69,7 +72,7 @@
   position: absolute;
   width: 80px;  /* Adjust basket size */
   height: 20px;
-  background-color: blue;
+  background-color: #1B4D3E;
   bottom: 0;
   left: 50%;  /* Initially position basket at center */
   transform: translateX(-50%); /* Center basket horizontally */
@@ -108,4 +111,8 @@
   justify-content: center; /* Center vertically */
   height: 200px; /* Adjust the height as needed */
   margin: 0 auto; /* Center the div itself horizontally if needed */
+}
+body {
+  background-color: #f0f2f5; /* light gray */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
