@@ -16,7 +16,8 @@ export class GameComponent implements OnInit {
   ballInterval: any;
   multiplier = 1;
   flashedScore: string = ''; // To hold the flash score
-
+  numberMultiplier: string = ''; // To hold the flash score
+  
   ngOnInit() {
     this.startGame();
   }
@@ -66,10 +67,12 @@ export class GameComponent implements OnInit {
 
   flashMultiplication() {
     const currentCatch = this.score; // Use the score as the catch number
-    this.flashedScore = `${this.multiplier} x ${currentCatch} = ${this.multiplier * currentCatch}`;
+    this.numberMultiplier = `${this.multiplier} x ${currentCatch}`;
+    this.flashedScore = `${this.multiplier * currentCatch}`;
 
     // Reset the flashed score after 1 second (flashes for 1 second)
     setTimeout(() => {
+      this.numberMultiplier = '';
       this.flashedScore = '';
     }, 1000);
   }

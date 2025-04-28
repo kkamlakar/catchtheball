@@ -21,7 +21,8 @@
       <div class="game-frame" id="game-frame">
         <div class="ball" id="ball"></div>
         <div class="basket" id="basket"></div>
-        <div class="flashing-score" *ngIf="flashedScore">{{ flashedScore }}</div>
+        <div class="multipling-score" *ngIf="numberMultiplier" style="margin-top: -100px;">{{ numberMultiplier }}</div>
+        <div class="flashing-score" *ngIf="flashedScore" style="margin-bottom: -100px;">{{ flashedScore }}</div>
       </div>
     </section>
   </div>
